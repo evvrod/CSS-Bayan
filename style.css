@@ -1,0 +1,127 @@
+*,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.bayan {
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+
+  cursor: pointer;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 30px;
+}
+
+.item-head>p {
+  color: blue;
+}
+
+.img {
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  transition: transform 0.3s;
+}
+
+.img img {
+  height: 200px;
+  transition: transform 0.3s;
+}
+
+.button {
+  display: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.button span {
+  top: 9px;
+  position: absolute;
+  display: block;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: #000000;
+
+  transition: transform 0.3s;
+}
+
+.button span:nth-child(2) {
+  transform: translateY(0) rotate(90deg);
+}
+
+.item:target .img {
+  display: flex;
+  height: 300px;
+}
+
+.item:target img {
+  height: 240px;
+}
+
+.item:target p {
+  color: #000000;
+}
+
+.item:target span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+
+.item:target span:nth-child(2) {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.bayan:hover .button {
+  display: block;
+}
+
+.bayan:hover .item-head {
+  color: #000000;
+}
+
+.item:hover .img{
+  /* display: flex; */
+  height: 300px;
+  background-color: red;
+}
+
+.item:hover img {
+  /* height: 200px; */
+  transform: scale(1.2);
+}
+
+.item:hover .button{
+  display: block;
+}
+
+.item:hover span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+
+.item:hover span:nth-child(2) {
+  transform: translateY(0) rotate(-45deg);
+}
